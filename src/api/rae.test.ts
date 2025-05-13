@@ -25,7 +25,7 @@ describe.skip("RAE API", () => {
 
     it("should throw error for non-existent words", async () => {
       // Using a gibberish word that shouldn't exist in the dictionary
-      await expect(searchWord("xyzxyzxyznotaword")).rejects.toThrow("Error en la petición: Not Found");
+      await expect(searchWord("xyzxyzxyznotaword")).rejects.toThrow("Request error: Not Found");
     });
   });
 

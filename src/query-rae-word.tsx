@@ -36,14 +36,14 @@ export default function Command() {
       onSearchTextChange={(text) => {
         handleSearch(text);
       }}
-      searchBarPlaceholder="Buscar en el diccionario RAE..."
+      searchBarPlaceholder="Search in RAE dictionary..."
       throttle
     >
       {error ? (
         <List.EmptyView
           icon={Icon.ExclamationMark}
-          title="Palabra no encontrada"
-          description="Intenta con otra palabra o revisa tu ortografía."
+          title="Word not found"
+          description="Try with another word or check your spelling."
         />
       ) : results ? (
         <WordEntryFC wordEntry={results} />

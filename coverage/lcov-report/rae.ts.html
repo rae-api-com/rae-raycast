@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16% </span>
+                <span class="strong">92% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/25</span>
+                <span class='fraction'>23/25</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>9/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.39% </span>
+                <span class="strong">91.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/23</span>
+                <span class='fraction'>21/23</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -324,44 +324,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import fetch from "node-fetch";
 &nbsp;
@@ -473,45 +473,45 @@ export type WordOnlyResponse = ApiResponse&lt;Word&gt;;
 export type WordEntryResponse = ApiResponse&lt;WordEntry&gt;;
 &nbsp;
 // Helper function to make API requests and handle errors
-async function <span class="fstat-no" title="function not covered" >makeApiRequest&lt;</span>T&gt;(url: string): Promise&lt;T&gt; {
-  const response = <span class="cstat-no" title="statement not covered" >await fetch(url);</span>
+async function makeApiRequest&lt;T&gt;(url: string): Promise&lt;T&gt; {
+  const response = await fetch(url);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!response.ok) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error(`Error en la petición: ${response.statusText}`);</span>
+  if (!response.ok) {
+    throw new Error(`Request error: ${response.statusText}`);
   }
 &nbsp;
-  const res = <span class="cstat-no" title="statement not covered" >(await response.json()) as ApiResponse&lt;T&gt;;</span>
+  const res = (await response.json()) as ApiResponse&lt;T&gt;;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!res.ok) {</span>
-    const errorMsg = <span class="cstat-no" title="statement not covered" >res.error === "NOT_FOUND" ? "Palabra no encontrada" : res.error;</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error(`Error en la respuesta de la API: ${errorMsg}`);</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!res.ok) {
+    const errorMsg = <span class="cstat-no" title="statement not covered" >res.error === "NOT_FOUND" ? "Word not found" : res.error;</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error(`API response error: ${errorMsg}`);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return res.data;</span>
+  return res.data;
 }
 &nbsp;
-export const searchWord = <span class="fstat-no" title="function not covered" >as</span>ync (word: string): Promise&lt;WordEntry&gt; =&gt; {
-<span class="cstat-no" title="statement not covered" >  return makeApiRequest&lt;WordEntry&gt;(`${API_BASE_URL}/api/words/${encodeURIComponent(word)}`);</span>
+export const searchWord = async (word: string): Promise&lt;WordEntry&gt; =&gt; {
+  return makeApiRequest&lt;WordEntry&gt;(`${API_BASE_URL}/api/words/${encodeURIComponent(word)}`);
 };
 &nbsp;
-export const getDailyWord = <span class="fstat-no" title="function not covered" >as</span>ync (): Promise&lt;WordEntry&gt; =&gt; {
-  const res = <span class="cstat-no" title="statement not covered" >await makeApiRequest&lt;Word&gt;(`${API_BASE_URL}/api/daily`);</span>
-<span class="cstat-no" title="statement not covered" >  return searchWord(res.word);</span>
+export const getDailyWord = async (): Promise&lt;WordEntry&gt; =&gt; {
+  const res = await makeApiRequest&lt;Word&gt;(`${API_BASE_URL}/api/daily`);
+  return searchWord(res.word);
 };
 &nbsp;
-export const getRandomWord = <span class="fstat-no" title="function not covered" >as</span>ync (minLength?: number, maxLength?: number): Promise&lt;WordEntry&gt; =&gt; {
-  let url = <span class="cstat-no" title="statement not covered" >`${API_BASE_URL}/api/random`;</span>
-  const params = <span class="cstat-no" title="statement not covered" >new URLSearchParams();</span>
+export const getRandomWord = async (minLength?: number, maxLength?: number): Promise&lt;WordEntry&gt; =&gt; {
+  let url = `${API_BASE_URL}/api/random`;
+  const params = new URLSearchParams();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (minLength) <span class="cstat-no" title="statement not covered" >params.append("min_length", minLength.toString());</span></span>
-<span class="cstat-no" title="statement not covered" >  if (maxLength) <span class="cstat-no" title="statement not covered" >params.append("max_length", maxLength.toString());</span></span>
+  if (minLength) params.append("min_length", minLength.toString());
+  if (maxLength) params.append("max_length", maxLength.toString());
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (params.toString()) {</span>
-<span class="cstat-no" title="statement not covered" >    url += `?${params.toString()}`;</span>
+  if (params.toString()) {
+    url += `?${params.toString()}`;
   }
 &nbsp;
-  const res = <span class="cstat-no" title="statement not covered" >await makeApiRequest&lt;Word&gt;(url);</span>
-<span class="cstat-no" title="statement not covered" >  return searchWord(res.word);</span>
+  const res = await makeApiRequest&lt;Word&gt;(url);
+  return searchWord(res.word);
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -520,7 +520,7 @@ export const getRandomWord = <span class="fstat-no" title="function not covered"
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-05T22:35:44.382Z
+                at 2025-05-13T10:15:18.486Z
             </div>
         <script src="prettify.js"></script>
         <script>

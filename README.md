@@ -1,28 +1,28 @@
-# Diccionario RAE
+# RAE Dictionary
 
-Busca palabras en el diccionario de la Real Academia Española directamente desde Raycast. Obtén definiciones, conjugaciones y expresiones de forma rápida y sin abrir el navegador. Uso de [rae-api.com](https://rae-api.com), API de la RAE no oficial.
+Search words in the Royal Spanish Academy dictionary directly from Raycast. Get definitions, conjugations, and expressions quickly without opening a browser. This is the official extension for the unofficial API [rae-api.com](https://rae-api.com).
   
-## Características
+## Features
 
-- Busca palabras en el diccionario de la RAE
-- Muestra la palabra del día
-- Obtén palabras aleatorias
-- Copia definiciones rápidamente
+- Search words in the RAE dictionary
+- Show the word of the day
+- Get random words
+- Quickly copy definitions
 
-## Comandos
+## Commands
 
-- `Consultar palabra de la RAE`: Busca una palabra en el diccionario de la RAE
-- `Consultar la palabra del día de la RAE`: Muestra la palabra del día
-- `Consultar una palabra aleatoria de la RAE`: Muestra una palabra aleatoria del diccionario
+- `Query RAE word`: Look up a word in the RAE dictionary
+- `Query RAE word of the day`: Displays the word of the day
+- `Query random RAE word`: Shows a random word from the dictionary
 
-## Configuración
+## Configuration
 
-No requiere configuración adicional.
+No additional configuration required.
 
-## Créditos
+## Credits
 
-Esta extensión utiliza la API no oficial de la RAE y no está afiliada con la Real Academia Española.
+This extension uses the unofficial RAE API and is not affiliated with the Royal Spanish Academy.
 
-## Soporte
+## Support
 
-Si encuentras algún problema, por favor reporta el issue en GitHub.
+If you encounter any issues, please report them on GitHub.

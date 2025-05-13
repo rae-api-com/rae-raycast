@@ -19,7 +19,7 @@ interface WordDetailProps {
 
 function renderOrigin(meaning: Meaning) {
   if (!meaning.origin) return "";
-  return `**Origen:** ${meaning.origin.text || meaning.origin.raw}\n\n`;
+  return `**Origin:** ${meaning.origin.text || meaning.origin.raw}\n\n`;
 }
 
 function renderDefinitions(senses: Definition[]) {
@@ -27,8 +27,8 @@ function renderDefinitions(senses: Definition[]) {
     .map((sense) => {
       const category = sense.category ? `*${sense.category}*` : "";
       const usage = sense.usage && sense.usage !== "common" ? ` (${sense.usage})` : "";
-      const synonyms = sense.synonyms && sense.synonyms.length > 0 ? `\n_Sinónimos_: ${sense.synonyms.join(", ")}` : "";
-      const antonyms = sense.antonyms && sense.antonyms.length > 0 ? `\n_Antónimos_: ${sense.antonyms.join(", ")}` : "";
+      const synonyms = sense.synonyms && sense.synonyms.length > 0 ? `\n_Synonyms_: ${sense.synonyms.join(", ")}` : "";
+      const antonyms = sense.antonyms && sense.antonyms.length > 0 ? `\n_Antonyms_: ${sense.antonyms.join(", ")}` : "";
       return `${category} ${sense.meaning_number}. ${sense.description}${usage}${synonyms}${antonyms}`;
     })
     .join("\n\n");
@@ -36,8 +36,8 @@ function renderDefinitions(senses: Definition[]) {
 
 function renderNonPersonal(nonPersonal: ConjugationNonPersonal) {
   return (
-    `### Formas no personales\n` +
-    `| Infinitivo | Participio | Gerundio | Infinitivo compuesto | Gerundio compuesto |\n` +
+    `### Non-personal forms\n` +
+    `| Infinitive | Participle | Gerund | Compound infinitive | Compound gerund |\n` +
     `|---|---|---|---|---|\n` +
     `| ${nonPersonal.infinitive} | ${nonPersonal.participle} | ${nonPersonal.gerund} | ${nonPersonal.compound_infinitive} | ${nonPersonal.compound_gerund} |\n`
   );
@@ -45,14 +45,14 @@ function renderNonPersonal(nonPersonal: ConjugationNonPersonal) {
 
 function renderConjugationTable(conj: Conjugation) {
   return (
-    `| Yo | Tú | Usted | Él/Ella | Nosotros | Vosotros | Ustedes | Ellos/Ellas |\n` +
+    `| I | You | You (formal) | He/She | We | You (plural) | You (plural formal) | They |\n` +
     `|---|---|---|---|---|---|---|---|\n` +
     `| ${conj.singular_first_person} | ${conj.singular_second_person} | ${conj.singular_formal_second_person} | ${conj.singular_third_person} | ${conj.plural_first_person} | ${conj.plural_second_person} | ${conj.plural_formal_second_person} | ${conj.plural_third_person} |\n`
   );
 }
 
 function renderIndicative(indicative: ConjugationIndicative) {
-  let md = `### Indicativo\n`;
+  let md = `### Indicative\n`;
   for (const [tense, conj] of Object.entries(indicative)) {
     if (!conj) continue;
     md += `**${formatTense(tense)}**\n\n`;
@@ -63,7 +63,7 @@ function renderIndicative(indicative: ConjugationIndicative) {
 }
 
 function renderSubjunctive(subjunctive: ConjugationSubjunctive) {
-  let md = `### Subjuntivo\n`;
+  let md = `### Subjunctive\n`;
   for (const [tense, conj] of Object.entries(subjunctive)) {
     if (!conj) continue;
     md += `**${formatTense(tense)}**\n\n`;
@@ -75,8 +75,8 @@ function renderSubjunctive(subjunctive: ConjugationSubjunctive) {
 
 function renderImperative(imperative: ConjugationImperative) {
   return (
-    `### Imperativo\n` +
-    `| Tú | Usted | Vosotros | Ustedes |\n` +
+    `### Imperative\n` +
+    `| You (singular) | You (formal) | You (plural) | You (plural formal) |\n` +
     `|---|---|---|---|\n` +
     `| ${imperative.singular_second_person} | ${imperative.singular_formal_second_person} | ${imperative.plural_second_person} | ${imperative.plural_formal_second_person} |\n`
   );
@@ -99,7 +99,7 @@ function formatTense(tense: string) {
 export function WordDetail({ wordEntry, showActions = true }: WordDetailProps) {
   const meaningsMd = wordEntry.meanings
     .map((meaning, idx) => {
-      let md = `## Significado ${idx + 1}\n`;
+      let md = `## Meaning ${idx + 1}\n`;
       md += renderOrigin(meaning);
       md += renderDefinitions(meaning.senses);
       if (meaning.conjugations) {
@@ -118,12 +118,12 @@ export function WordDetail({ wordEntry, showActions = true }: WordDetailProps) {
         showActions ? (
           <ActionPanel>
             <Action.CopyToClipboard
-              title="Copiar Palabra"
+              title="Copy Word"
               content={wordEntry.word}
               shortcut={{ modifiers: ["cmd"], key: "c" }}
             />
             <Action.CopyToClipboard
-              title="Copiar Definición"
+              title="Copy Definition"
               content={meaningsMd}
               shortcut={{ modifiers: ["cmd", "shift"], key: "c" }}
             />

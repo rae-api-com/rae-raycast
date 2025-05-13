@@ -31,12 +31,12 @@ export default function Command() {
   return (
     <List
       isLoading={isLoading}
-      navigationTitle="Palabra aleatoria del diccionario RAE"
-      searchBarPlaceholder="Cargando palabra aleatoria..."
+      navigationTitle="Random word from RAE dictionary"
+      searchBarPlaceholder="Loading random word..."
       actions={
         <ActionPanel>
           <Action
-            title="Cargar Otra Palabra Aleatoria"
+            title="Load Another Random Word"
             onAction={fetchRandomWord}
             icon={Icon.Repeat}
             shortcut={{ modifiers: ["cmd"], key: "r" }}
@@ -47,18 +47,18 @@ export default function Command() {
       {error ? (
         <List.EmptyView
           icon={Icon.ExclamationMark}
-          title="No se pudo cargar una palabra aleatoria"
-          description={`${error}. Intenta de nuevo.`}
+          title="Couldn't load a random word"
+          description={`${error}. Try again.`}
           actions={
             <ActionPanel>
-              <Action title="Intentar De Nuevo" onAction={fetchRandomWord} icon={Icon.Repeat} />
+              <Action title="Try Again" onAction={fetchRandomWord} icon={Icon.Repeat} />
             </ActionPanel>
           }
         />
       ) : wordEntry ? (
         <WordEntryFC wordEntry={wordEntry} />
       ) : (
-        <List.EmptyView title="Cargando..." />
+        <List.EmptyView title="Loading..." />
       )}
     </List>
   );

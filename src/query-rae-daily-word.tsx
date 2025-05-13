@@ -28,7 +28,7 @@ export default function Command() {
   return (
     <List isLoading={isLoading}>
       {error ? (
-        <List.EmptyView icon={Icon.ExclamationMark} title="No se pudo cargar la palabra del día" description={error} />
+        <List.EmptyView icon={Icon.ExclamationMark} title="Couldn't load word of the day" description={error} />
       ) : wordEntry ? (
         <WordEntryFC wordEntry={wordEntry} />
       ) : null}

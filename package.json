@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "rae-diccionario-raycast",
-  "title": "Diccionario Rae",
-  "description": "Busca palabras en el diccionario de la Real Academia Española directamente desde Raycast. Obtén definiciones, conjugaciones y expresiones de forma rápida y sin abrir el navegador. Uso de https://rae-api.com, API no oficial.",
+  "name": "rae-dictionary-raycast",
+  "title": "RAE Dictionary",
+  "description": "Query words in the Royal Spanish Academy dictionary directly from Raycast. Get definitions, conjugations, and expressions quickly without opening a browser. Using https://rae-api.com, unofficial API.",
   "icon": "extension-icon.png",
   "author": "sonirico",
   "categories": [
@@ -15,23 +15,23 @@
   "commands": [
     {
       "name": "query-rae-word",
-      "title": "Consultar Palabra En La Rae",
-      "subtitle": "Diccionario de la Rae",
-      "description": "Consulta una palabra al diccionario de la rae",
+      "title": "Query Word In RAE",
+      "subtitle": "RAE Dictionary",
+      "description": "Query a word in the RAE dictionary",
       "mode": "view"
     },
     {
       "name": "query-rae-daily-word",
-      "title": "Consultar La Palabra Del Día En La Rae",
-      "subtitle": "Diccionario de la Rae",
-      "description": "Consulta la palabra del día según la Rae",
+      "title": "Query Word Of The Day In RAE",
+      "subtitle": "RAE Dictionary",
+      "description": "Query the RAE word of the day",
       "mode": "view"
     },
     {
       "name": "query-rae-random-word",
-      "title": "Consultar Una Palabra Aleatoria En La Rae",
-      "subtitle": "Diccionario de la Rae",
-      "description": "Consulta una palabra aleatoria del diccionario de la Rae",
+      "title": "Query Random Word In RAE",
+      "subtitle": "RAE Dictionary",
+      "description": "Query a random word from the RAE dictionary",
       "mode": "view"
     }
   ],

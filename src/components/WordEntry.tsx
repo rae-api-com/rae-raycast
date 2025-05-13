@@ -9,8 +9,8 @@ export function WordEntryFC({ wordEntry }: { wordEntry: WordEntry }) {
       title={wordEntry.word}
       actions={
         <ActionPanel>
-          <Action.Push title="Ver Detalles" target={<WordDetail wordEntry={wordEntry} />} />
-          <Action.CopyToClipboard title="Copiar Palabra" content={wordEntry.word} />
+          <Action.Push title="View Details" target={<WordDetail wordEntry={wordEntry} />} />
+          <Action.CopyToClipboard title="Copy Word" content={wordEntry.word} />
         </ActionPanel>
       }
     />
