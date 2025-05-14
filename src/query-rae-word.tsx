@@ -24,7 +24,7 @@ export default function Command() {
       setResults(entry);
     } catch (e) {
       setError(String(e));
-      showFailureToast(e, { title: "Error" });
+      showFailureToast(e, { title: "Could not load requested word" });
     } finally {
       setIsLoading(false);
     }
@@ -47,7 +47,9 @@ export default function Command() {
         />
       ) : results ? (
         <WordEntryFC wordEntry={results} />
-      ) : null}
+      ) : (
+        <List.EmptyView icon={Icon.MagnifyingGlass} title="Search for a word" description="Type to search..." />
+      )}
     </List>
   );
 }

@@ -17,10 +17,7 @@ describe.skip("RAE API", () => {
       expect(result.meanings.length).toBeGreaterThan(0);
       expect(result.meanings[0].senses.length).toBeGreaterThan(0);
 
-      // Save snapshot of the response structure
-      expect(result).toMatchSnapshot({
-        // Exclude any fields that might change between test runs if needed
-      });
+      expect(result).toMatchSnapshot({});
     });
 
     it("should throw error for non-existent words", async () => {

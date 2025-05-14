@@ -18,7 +18,7 @@ export default function Command() {
       setWordEntry(entry);
     } catch (e) {
       setError(String(e));
-      showFailureToast(e, { title: "Error" });
+      showFailureToast(e, { title: "Could not load random word" });
     } finally {
       setIsLoading(false);
     }
